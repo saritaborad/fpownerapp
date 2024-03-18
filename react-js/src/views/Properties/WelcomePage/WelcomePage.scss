@@ -1,0 +1,132 @@
+@import "../../../styles/variables.scss";
+
+.welcome-page {
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+
+  @media #{$grid-lg} {
+    top: 0;
+    transform: none;
+  }
+
+  .buttons {
+    text-align: center;
+
+    @media #{$grid-lg} {
+      text-align: left;
+    }
+  }
+
+  .edit-profile-header {
+    color: $primary-text-color;
+    font-family: $font-bold;
+    font-size: 14px;
+    margin-bottom: 2px;
+
+    @media #{$grid-lg} {
+      font-size: 60px;
+      font-family: $font-light;
+    }
+  }
+
+  .round-separator {
+    width: 100px;
+    margin: 0 auto 5px;
+
+    @media #{$grid-lg} {
+      display: none;
+    }
+  }
+
+  .welcome-text {
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+
+    @media #{$grid-lg} {
+      display: none;
+    }
+  }
+
+  .initialize-profile-paragraph {
+    font-size: 14px;
+    font-family: $font-bold;
+    text-align: center;
+    padding: 0 10px;
+    color: $primary-text-color;
+
+    @media #{$grid-lg} {
+      margin-top: 40px;
+      font-size: 23px;
+      font-family: $font-light;
+      text-align: left;
+      padding: 0;
+      color: black;
+    }
+  }
+
+  .btn {
+    width: 200px;
+    font-family: $font-light;
+    margin-top: 10px;
+    background-color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+
+    @media #{$grid-md} {
+      width: 200px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 1px;
+        height: 30px;
+        top: 10px;
+      }
+
+      &::after {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        content: "";
+        position: absolute;
+        top: 21px;
+      }
+    }
+  }
+
+  .btn-next {
+    &.finish {
+      padding: 15px;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    @media #{$grid-md} {
+      padding: 15px 60px 15px 0;
+
+      &::before {
+        background-color: white;
+        right: 30%;
+      }
+
+      &::after {
+        border-width: 5px 0 5px 10px;
+        border-color: transparent transparent transparent white;
+        right: 25px;
+      }
+    }
+  }
+}

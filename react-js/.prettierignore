@@ -1,0 +1,6 @@
+.cache
+package.json
+build
+public
+node_modules
+cypress

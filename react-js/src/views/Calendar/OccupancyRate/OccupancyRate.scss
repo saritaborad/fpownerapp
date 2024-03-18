@@ -1,0 +1,85 @@
+@import "styles/variables";
+@import "@kapost/react-component-slider/lib/stylesheets/component-slider";
+
+.occupancy-slider-pc {
+  @media (max-width: $mobile-screen-max) {
+    width: calc(100vw - 19px);
+  }
+}
+
+.occupancy-slider-mobile {
+  @media (max-width: $mobile-screen-max) {
+    width: 100vw;
+  }
+}
+
+.menu-item {
+  width: 100px;
+  display: inline-block;
+  padding: 15px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.month-rate-column {
+  text-align: center;
+  padding: 1px;
+  color: $primary-text-color;
+
+  @media (max-width: $mobile-screen-max) {
+    width: calc((100vw - 60px) / 3);
+    max-width: 150px;
+
+    .month-rate{
+      font-size: 18px;
+    }
+  }
+  @media (min-width: $mobile-screen-min) {
+    width: calc(100% / 6);
+  }
+  p.month-name {
+    font-size: 0.8em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: $secondary-color;
+    padding: 10px;
+  }
+  .pie-chart {
+    padding: 20px;
+  }
+}
+
+.component-slider {
+  .slider-container {
+    margin: 0 30px;
+  }
+
+  @media (max-width: $mobile-screen-max) {
+    .slider-content {
+      padding-right: 30px;
+    }
+  }
+
+  .caret {
+    background: $main-color;
+    height: 100%;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .caret-right {
+    right: 10px;
+  }
+  .caret-left {
+    left: 10px;
+  }
+
+  .arrow-left {
+    transform: rotate(180deg);
+  }
+}

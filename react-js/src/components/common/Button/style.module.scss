@@ -1,0 +1,99 @@
+@import '../../../styles/variables.scss';
+
+.button {
+  outline: none !important;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  font-size: 14px;
+
+  @media #{$grid-md} {
+    padding: 10px 25px;
+    font-size: 16px;
+  }
+}
+
+.filled {
+  background-color: $main-color;
+  color: white;
+  border: none;
+
+  .prefixContainer,
+  .postfixContainer {
+    border-color: white;
+
+    path {
+      fill: white;
+    }
+  }
+}
+
+.outline {
+  background-color: transparent;
+  color: $main-color;
+  border: 1px solid $main-color;
+
+  .prefixContainer,
+  .postfixContainer {
+    border-color: $main-color;
+
+    path {
+      fill: $main-color;
+    }
+  }
+}
+
+.prefix,
+.postfix {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prefixContainer,
+.postfixContainer {
+  margin-top: -1px;
+  display: flex;
+  align-items: center;
+}
+
+.prefixContainer {
+  margin-right: 10px;
+
+  &.withSpacer {
+    border-right: 1px solid;
+    padding-right: 15px;
+    margin-right: 20px;
+    height: 25px;
+
+    @media #{$grid-md} {
+      padding-right: 25px;
+      margin-right: 40px;
+      height: 35px;
+    }
+  }
+}
+
+.postfixContainer {
+  margin-left: 10px;
+
+  &.withSpacer {
+    border-left: 1px solid;
+    padding-left: 15px;
+    margin-left: 20px;
+    height: 25px;
+
+    @media #{$grid-md} {
+      padding-left: 25px;
+      margin-left: 40px;
+      height: 35px;
+    }
+  }
+}
+
+.big {
+  padding: 8px 15px;
+
+  @media #{$grid-md} {
+    padding: 12px 27px;
+  }
+}

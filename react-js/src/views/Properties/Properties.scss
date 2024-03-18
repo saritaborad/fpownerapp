@@ -1,0 +1,140 @@
+@import '../../styles/variables.scss';
+
+.properties-container {
+  letter-spacing: 0.9px;
+  .heading {
+    font-size: 16px;
+    font-family: $font-light;
+  }
+
+  .property {
+    margin: 10px 0px;
+    display: flex;
+    border: 1px solid $main-color;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .picture {
+      width: 108px;
+      height: 108px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .property-info {
+      width: calc(100% - 125px);
+      padding: 10px;
+
+      .icon-home {
+        margin-right: 5px;
+      }
+
+      .property-nickname {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      .property-last {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .property-activity {
+        display: flex;
+
+        &:not(.property-active) {
+          color: $primary-text-color;
+
+          .icon-tick {
+            background-color: $primary-text-color;
+          }
+        }
+
+        .icon-tick {
+          margin-right: 5px;
+        }
+
+        .property-activity-text {
+          letter-spacing: 0.65px;
+          font-size: 13px;
+          line-height: 13px;
+        }
+      }
+
+      .property-bedrooms {
+        color: $primary-text-color;
+        letter-spacing: 0.65px;
+        font-size: 13px;
+        line-height: 17px;
+      }
+
+      .round-separator {
+        margin: 10px 0;
+
+        div,
+        ::before,
+        ::after {
+          background-color: $secondary-color;
+        }
+      }
+
+      .property-location {
+        color: $primary-text-color;
+        font-size: 13px;
+        letter-spacing: 0.65px;
+        line-height: 17px;
+      }
+
+      .property-single-line {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .pagination {
+    margin: 15px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .page {
+      border: 1px solid black;
+      padding: 5px;
+      margin: 5px 10px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.selected {
+        border-color: $main-color;
+        color: $main-color;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.alert-property-item {
+  margin: 10px 0;
+
+  a {
+    color: $main-color;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "statements": "Отчёты",
+  "picture": "Фото",
+  "name": "Имя",
+  "title": "Название",
+  "address": "Адрес",
+  "city": "Город",
+  "tags": "Тэги",
+  "search": "Поиск",
+  "totalReservations": "Бронирования",
+  "total": "{{month}} Общий доход",
+  "managementFee": "Управление",
+  "expenses": "Расходы",
+  "additions": "Дополнения",
+  "deductions": "Удержания",
+  "statement": "Отчёт",
+  "download": "Загрузить PDF",
+  "netAmount": "Чистая сумма к оплате",
+  "totalEarnings": "Итого"
+}

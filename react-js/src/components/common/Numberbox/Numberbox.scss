@@ -1,0 +1,57 @@
+@import "../../../styles/variables.scss";
+
+.numberbox.form-group {
+  font-family: $font-light;
+  font-size: $form-mobile-font-size;
+  display: flex;
+  align-items: center;
+
+  @media #{$grid-md} {
+    font-size: $form-desktop-font-size;
+  }
+
+  .form-check {
+    margin: 5px 0;
+  }
+
+  label {
+    font-family: $font-light;
+    margin-bottom: 0;
+    font-size: $form-mobile-font-size;
+    width: 20%;
+    min-width: 200px;
+    flex: 1;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size;
+      min-width: 320px;
+    }
+  }
+
+  .plus-minus-container {
+    display: flex;
+    padding: 0px 30px;
+    font-size: $form-mobile-font-size;
+    align-items: center;
+    height: 34px;
+
+    @media #{$grid-md} {
+      flex: 2;
+      font-size: $form-desktop-font-size;
+    }
+
+    .icon {
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .plus,
+    .minus {
+      height: 34px;
+    }
+
+    .curent-value {
+      margin: 0 20px;
+    }
+  }
+}

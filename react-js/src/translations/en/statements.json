@@ -1,0 +1,20 @@
+{
+  "statements": "Statements",
+  "picture": "Picture",
+  "name": "Name",
+  "title": "Title",
+  "address": "Address",
+  "city": "City",
+  "tags": "Tags",
+  "search": "Search",
+  "totalReservations": "Reservations",
+  "total": "{{month}} Earnings",
+  "managementFee": "Management Fee",
+  "expenses": "Expenses",
+  "additions": "Additions",
+  "deductions": "Deductions",
+  "statement": "Statement",
+  "download": "Download PDF",
+  "netAmount": "Net Amount Due",
+  "totalEarnings": "Total"
+}

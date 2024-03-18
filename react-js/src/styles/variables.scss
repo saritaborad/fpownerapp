@@ -1,0 +1,40 @@
+$mobile-screen-min: 992px;
+$mobile-screen-max: $mobile-screen-min + 1px;
+
+$main-color: #AD8C63;
+$main-color-light: #BC9D78;
+$secondary-color: #EEECEA;
+$gray-color: #DADDDE;
+$switch-background: #A7A7A7;
+$accent-color-1: #6395AD;
+$accent-color-2: #79A5BB;
+$primary-text-color: #707070;
+
+$font-bold: "FuturaLTPro-Book",'Segoe UI',sans-serif;
+$font-light: "FuturaBT-Light",'Segoe UI',sans-serif;
+
+$form-desktop-font-size-header: 23px;
+$form-desktop-font-size: 23px;
+$form-mobile-font-size-header: 13px;
+$form-mobile-font-size: 16px;
+
+
+$breakpoints: (
+  xs: 480px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px,
+);
+
+@function create-breakpoint($grid-name) {
+  @return ('screen and (min-width: #{map-get($breakpoints, $grid-name)})');
+}
+
+$grid-xs: create-breakpoint('xs');
+$grid-sm: create-breakpoint('sm');
+$grid-md: create-breakpoint('md');
+$grid-lg: create-breakpoint('lg');
+$grid-xl: create-breakpoint('xl');
+$grid-xxl: create-breakpoint('xxl');

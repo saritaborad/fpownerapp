@@ -1,0 +1,63 @@
+@import "../../../styles/variables.scss";
+
+.boolean.form-group {
+  font-family: $font-light;
+  display: flex;
+  margin-top: 15px !important;
+
+  .form-check {
+    margin: 5px 0;
+    display: inline-block;
+
+    @media #{$grid-md} {
+      flex: 2;
+      padding-left: 2.65rem;
+    }
+
+    @media #{$grid-xl} {
+      padding-left: 3.25rem;
+    }
+  }
+
+  > label {
+    font-family: $font-light;
+    font-size: $form-mobile-font-size-header;
+    width: 20%;
+    min-width: 250px;
+    flex: 1;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size-header;
+      min-width: 320px;
+    }
+  }
+
+  .switch {
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .switch-slider {
+    background-color: $switch-background;
+    height: 18px;
+    width: 34px;
+    border-color: $switch-background;
+
+    &::before {
+      width: 14px;
+      height: 14px;
+      top: 1px;
+      border-color: $switch-background;
+    }
+  }
+
+  .switch-input:checked + .switch-slider {
+    background-color: $main-color-light;
+    border-color: $main-color-light;
+
+    &::before {
+      border-color: $main-color-light;
+    }
+  }
+}

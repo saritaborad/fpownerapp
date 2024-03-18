@@ -1,0 +1,22 @@
+{
+  "calendar": "Calendar",
+  "booking details": "Booking Details",
+  "reservation": "Reservation",
+  "name": "Name",
+  "checkIn": "Check-in",
+  "checkOut": "Check-out",
+  "nights": "Nights",
+  "source": "Source",
+  "finances": "Finances",
+  "grossRevenue": "Gross revenue",
+  "managementFee": "Management fee",
+  "totalAmount": "Total Amount",
+  "earnings": "Projected Earnings",
+  "averageNightlyRate": "Average Nightly Rate",
+  "stays": "Stays",
+  "occupancyRate": "Occupancy Rate",
+  "futureOccupancy": "Future Occupancy",
+  "occupy": "occupied",
+  "details": "DETAILS",
+  "available": "available"
+}

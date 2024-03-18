@@ -1,0 +1,22 @@
+{
+  "calendar": "Календарь",
+  "booking details": "Детали бронирования",
+  "reservation": "Бронирование",
+  "name": "Имя",
+  "checkIn": "Заезд",
+  "checkOut": "Выезд",
+  "nights": "Ночей забронировано",
+  "source": "Ресурс",
+  "finances": "Финансы",
+  "grossRevenue": "Доход Гросс",
+  "managementFee": "Комиссия за управление",
+  "totalAmount": "Итого",
+  "earnings": "Предполагаемый доход",
+  "averageNightlyRate": "Средняя стоимость суток",
+  "stays": "Кол-во бронирований",
+  "occupancyRate": "Заполняемость",
+  "futureOccupancy": "Прогноз заполняемости",
+  "occupy": "Забронировано",
+  "details": "Данные",
+  "available": "Свободно"
+}

@@ -1,0 +1,72 @@
+@import "../../styles/variables.scss";
+
+.language-selector {
+  color: white;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-family: $font-light;
+
+  @media (min-width: $mobile-screen-min) {
+    color: $primary-text-color;
+  }
+
+  .triangle-selector {
+    margin-left: 0.5rem;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0.4rem 0.3rem 0 0.3rem;
+    border-color: #ffffff transparent transparent transparent;
+    transition: ease-in-out transform 200ms;
+
+    @media (min-width: $mobile-screen-min) {
+      border-color: $primary-text-color transparent transparent transparent;
+    }
+
+    &.rotate {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.languages-list-content {
+  z-index: 101;
+  position: absolute;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  top: 1.5rem;
+  left: 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: white;
+    color: $main-color;
+  }
+
+  li {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  cursor: default;
+}

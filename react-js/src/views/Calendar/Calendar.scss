@@ -1,0 +1,323 @@
+@import "../../styles/variables.scss";
+@import "~@fullcalendar/core/main.css";
+@import "~@fullcalendar/daygrid/main.css";
+
+.calendar-container {
+  padding: 10px;
+
+  @media (max-width: $mobile-screen-max) {
+    .row {
+      margin-right: -10px;
+      margin-left: -10px;
+    }
+
+    .col-lg-12,
+    .col-lg-3,
+    .col-lg-8 {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.calendar-table-container {
+  margin-top: 10px;
+
+  .fc-dayGrid-view .fc-body .fc-row {
+    max-height: 100px;
+  }
+
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+
+    .year-column,
+    .month-column {
+      display: flex;
+
+      .icon,
+      .year,
+      .month {
+        align-self: center;
+        font-size: 16px;
+      }
+
+      @media (min-width: $mobile-screen-min) {
+        .month,
+        .year {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .icon {
+      margin: 0px 10px;
+      width: 10px;
+      height: 18px;
+      display: inline-block;
+      background-color: $main-color;
+      mask-size: contain;
+      cursor: pointer;
+      margin-top: 4px;
+
+      &.icon-next {
+        mask-image: url('../../assets/ico-next.svg');
+      }
+
+      &.icon-prev {
+        mask-image: url('../../assets/ico-next.svg');
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.rbc-month-row {
+  overflow: visible;
+}
+
+.fc-day-top {
+  text-align: center;
+}
+
+span.fc-day-number {
+  float: none !important;
+  text-align: center !important;
+}
+
+.fc-event {
+  background-color: $accent-color-2;
+  // font-size: 1em;
+  font-family: $font-light;
+  color: #fff !important;
+  border-radius: 18px;
+  border: 1px solid $accent-color-2;
+  padding: 5px;
+  // margin-top: 20px !important;
+  .fc-content {
+    padding-left: 15px;
+  }
+}
+
+.fc-content-skeleton .fc-today span {
+  background: $gray-color;
+  border: 1px solid $gray-color;
+  border-radius: 50%;
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+}
+
+.fc-content-skeleton .fc-day-top span {
+  display: block;
+  height: 25px;
+  padding: 5px;
+}
+
+.fc-unthemed td.fc-today {
+  background: none !important;
+}
+
+.fc-day-header {
+  background: $secondary-color;
+  padding: 10px;
+  height: 2.5em;
+  text-align: center !important;
+  text-transform: uppercase;
+  color: $primary-text-color;
+  vertical-align: middle !important;
+  border: none !important;
+}
+
+.fc-content-skeleton {
+  tbody tr:nth-child(2) td a {
+    margin-top: -35px !important;
+    margin-bottom: 18px !important;
+    @media only screen and (max-device-width: 480px) {
+      margin-top: -28px !important;
+      margin-bottom: 1px !important;
+    }
+  }
+}
+
+tr {
+  > td:not([colspan]) {
+    > .fc-day-grid-event {
+      margin-left: 50%;
+      margin-right: 50%;
+    }
+  }
+  > td[colspan='2'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 2 / 2);
+      margin-right: calc(100% / 2 / 2);
+    }
+  }
+  > td[colspan='3'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 3 / 2);
+      margin-right: calc(100% / 3 / 2);
+    }
+  }
+  > td[colspan='4'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 4 / 2);
+      margin-right: calc(100% / 4 / 2);
+    }
+  }
+  > td[colspan='5'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 5 / 2);
+      margin-right: calc(100% / 5 / 2);
+    }
+  }
+  > td[colspan='6'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 6 / 2);
+      margin-right: calc(100% / 6 / 2);
+    }
+  }
+  > td[colspan='7'] {
+    > .fc-day-grid-event {
+      margin-left: calc(100% / 7 / 2);
+      margin-right: calc(100% / 7 / 2);
+    }
+  }
+}
+
+table.calendar {
+  width: 100%;
+
+  th.week-day {
+    background: $secondary-color;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $primary-text-color;
+  }
+
+  td.calendar-day {
+    padding: 8px;
+    border: 1px solid $secondary-color;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    vertical-align: top;
+
+    span.today {
+      padding: 5px;
+      border: 1px solid $accent-color-2;
+      border-radius: 50%;
+    }
+  }
+
+  td.not-current {
+    color: $gray-color;
+  }
+}
+
+.fc-bgevent {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 10px,
+    rgba(0, 0, 0, 0.3) 10px,
+    rgba(0, 0, 0, 0.3) 20px
+  );
+}
+
+.reservation-details {
+  padding: 15px;
+
+  &.property-overflow {
+    @media (min-width: $mobile-screen-min) {
+      position: relative;
+      left: 0;
+      top: 55px;
+    }
+  }
+
+  .reservation-header {
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-family: $font-bold;
+    text-transform: uppercase;
+
+    &.header-grayed {
+      color: $primary-text-color;
+    }
+  }
+
+  .rows {
+    margin-bottom: 20px;
+  }
+
+  .reservation-detail-row {
+    font-size: 14px;
+    letter-spacing: 0.65px;
+    margin: 5px 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .price {
+      white-space: nowrap;
+    }
+  }
+
+  .flex-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.calendar-statistics {
+  color: $primary-text-color;
+  font-family: $font-light;
+  text-transform: none;
+  font-weight: bold;
+  font-size: 14px;
+
+  @media (max-width: $mobile-screen-max) {
+    margin: 25px 0;
+    .header {
+      display: none;
+    }
+
+    .statistics-detail-row {
+      margin: 0 !important;
+    }
+  }
+  @media (min-width: $mobile-screen-min) {
+    padding: 10px;
+    .header {
+      color: white;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: normal;
+      letter-spacing: 2px;
+      background-color: $main-color;
+      padding: 10px;
+      font-family: $font-bold;
+    }
+    .round-separator {
+      display: none;
+    }
+  }
+
+  .flex-row {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "selectProperty": "Select property",
+  "bedroom": "Bedroom",
+  "bedrooms": "Bedrooms",
+  "active": "active",
+  "inactive": "inactive",
+  "uncompletedSurveys": "Please fill in client form",
+  "uncompletedSurveysPersonalText": "Please provide us with your personal data so we could transfer your future revenue.",
+  "uncompletedSurveysText": "Following properties are missing the \"Property info\" survey, or not all required fields are filled. Please click the name below to fill it in.",
+  "propertyNotFoundError": "Property not found"
+}

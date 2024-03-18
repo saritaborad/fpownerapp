@@ -1,0 +1,22 @@
+{
+  "calendar": "الرزنامة",
+  "booking details": "تفاصيل الحجز",
+  "reservation": "الحجز",
+  "name": "الاسم",
+  "checkIn": "تاريخ الوصول",
+  "checkOut": "تاريخ المغادرة",
+  "nights": "ليالٍ",
+  "source": "المصدر",
+  "finances": "الشؤون المالية",
+  "grossRevenue": "إجمالي الإيرادات",
+  "managementFee": "رسوم الإدارة",
+  "totalAmount": "المبلغ الإجمالي",
+  "earnings": "الأرباح المتوقعة",
+  "averageNightlyRate": "متوسط سعر الليلة",
+  "stays": "إقامات",
+  "occupancyRate": "معدّل الإشغال",
+  "futureOccupancy": "الإشغال المستقبلي",
+  "occupy": "مشغول",
+  "details": "التفاصيل",
+  "available": "متاح"
+}

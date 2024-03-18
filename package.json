@@ -1,0 +1,28 @@
+{
+  "name": "react.cordova",
+  "version": "0.1.1",
+  "private": true,
+  "devDependencies": {
+    "ncp": "2.0.0",
+    "cordova": "9.0.0",
+    "react.cordova": "1.8.4"
+  },
+  "scripts": {
+    "postinstall": "cd react-js && npm install",
+    "start": "npm run start:web --prefix react-js/",
+    "start:reco": "ncp react-js/src/environments/environment.dev.js react-js/src/environments/environment.js && reco start",
+    "start:reco:prod": "ncp react-js/src/environments/environment.prod.js react-js/src/environments/environment.js && reco start",
+    "build": "npm run build:web --prefix react-js/",
+    "build:reco": "ncp react-js/src/environments/environment.dev.js react-js/src/environments/environment.js && reco build",
+    "build:android:prod": "ncp react-js/src/environments/environment.prod.js react-js/src/environments/environment.js && reco build android --release",
+    "build:ios:prod": "ncp react-js/src/environments/environment.prod.js react-js/src/environments/environment.js && reco build ios --release",
+    "lint": "cd react-js && npm run lint",
+    "lint:fix": "cd react-js && npm run lint:fix",
+    "format": "cd react-js && npm run format",
+    "format:fix": "cd react-js && npm run format:fix"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "objectorarray": "1.0.5"
+  }
+}

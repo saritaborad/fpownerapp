@@ -1,0 +1,52 @@
+@import "../../../styles/variables.scss";
+
+.smallCalendar {
+  @media (max-width: $mobile-screen-max) {
+    display: none;
+  }
+  padding: 10px;
+  color: $primary-text-color;
+
+  .smallCalendar-container {
+    width: 100%;
+
+    .calendar-month {
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background-color: $secondary-color;
+      padding: 10px;
+    }
+
+
+    .calendar-table {
+      width: 100%;
+
+      td, th {
+        text-align: center;
+        vertical-align: center;
+      }
+
+      td.calendar-day {
+        height: 2.5em;
+
+        span {
+          display: inline-block;
+          width: 2.2em;
+          height: 2.2em;
+        }
+      }
+
+      td.calendar-day.booked {
+        span {
+          background-color: $accent-color-1;
+          color: #fff;
+          padding: 5px;
+          border: 1px solid $accent-color-1;
+          border-radius: 30%;
+        }
+      }
+    }
+  }
+}

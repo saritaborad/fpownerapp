@@ -1,0 +1,79 @@
+@import "../../styles/variables.scss";
+
+.public-container {
+  background-image: url("./../../assets/background_mobile.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: bottom right;
+  overflow: auto;
+
+  @media (min-width: 1225px) {
+    background-image: url("./../../assets/background_desktop.jpg");
+  }
+
+  .public-content {
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 80px 15px 10px;
+
+    @media (max-height: 570px) {
+      padding: 30px 15px 10px;
+    }
+  }
+
+  .input-group {
+    margin: 10px 0;
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+  }
+
+  .form-control {
+    letter-spacing: 0.8px;
+  }
+
+  .switch-option {
+    margin-top: 30px;
+    display: block;
+    text-align: center;
+      color: white;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+    cursor: pointer;
+  }
+
+  .public-header {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    margin: 25px 0;
+    letter-spacing: 0.9px;
+  }
+
+  .submit-button {
+    background-color: $main-color;
+    width: 100%;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 40px;
+    font-size: 18px;
+    letter-spacing: 0.9px;
+  }
+
+  .fp-logo {
+    margin: 0 auto 80px;
+    display: block;
+    max-width: calc(100% - 10px);
+
+    @media (max-width: $mobile-screen-max) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  .card {
+    border-radius: 0;
+    border: none;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "statements": "البيانات",
+  "picture": "الصورة",
+  "name": "الاسم",
+  "title": "اللقب",
+  "address": "العنوان",
+  "city": "المدينة",
+  "tags": "الوسوم",
+  "search": "البحث",
+  "totalReservations": "الحجوزات",
+  "total": "أرباح {{month}}",
+  "managementFee": "رسوم الإدارة",
+  "expenses": "المصاريف",
+  "additions": "الإضافات",
+  "deductions": "الاقتطاعات",
+  "statement": "البيان",
+  "download": "تنزيل ملف PDF",
+  "netAmount": "صافي المبلغ المستحق",
+  "totalEarnings": "المجموع"
+}

@@ -1,0 +1,37 @@
+@import '../../../styles/variables.scss';
+
+.textbox.form-group {
+  font-family: $font-light;
+
+  label {
+    font-family: $font-light;
+    margin-bottom: 0.3rem;
+    font-size: $form-mobile-font-size-header;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size-header;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .form-control {
+    height: 48px;
+    font-size: $form-mobile-font-size;
+
+    @media #{$grid-md} {
+      height: 64px;
+      font-size: $form-desktop-font-size;
+    }
+  }
+
+  .textbox__description {
+    margin-top: -5px;
+    font-size: 10px;
+    line-height: 100%;
+
+    @media #{$grid-md} {
+      margin-top: -10px;
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,260 @@
+@import '../../styles/variables.scss';
+
+.edit-profile-form {
+  .finshed-steps-summary {
+    text-align: right;
+    font-family: $font-bold;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @media #{$grid-lg} {
+      margin-top: -20px;
+    margin-bottom: 40px;
+  }
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media #{$grid-md} {
+      flex-wrap: nowrap;
+    }
+
+    > div {
+      flex: 0 0 100%;
+
+      @media #{$grid-md} {
+        flex: 0 1 auto;
+      }
+    }
+
+    .btn-edit {
+      width: 100px;
+      font-family: $font-light;
+      font-size: 14px;
+      color: $main-color;
+      border: 1px solid $main-color;
+      background-color: transparent;
+      padding: 8px 15px;
+      margin-bottom: 8px;
+
+      @media #{$grid-sm} {
+        width: 150px;
+      }
+
+      @media #{$grid-md} {
+        padding: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .hidden-section {
+    display: none;
+  }
+
+  .section-status {
+    text-transform: uppercase;
+    color: $primary-text-color;
+    font-family: $font-light;
+    font-size: 13px;
+
+    @media #{$grid-md} {
+      font-size: 16px;
+    }
+  }
+
+  .section-name {
+    text-transform: uppercase;
+    font-family: $font-bold;
+    font-size: 18px;
+    color: black;
+    margin: 5px 0;
+
+    @media #{$grid-md} {
+      font-family: $font-light;
+      font-size: 28px;
+      color: $main-color;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+
+  .section-description {
+    font-size: 13px;
+    font-family: $font-bold;
+    color: $primary-text-color;
+
+    @media #{$grid-md} {
+      font-size: 18px;
+      font-family: $font-light;
+      color: black;
+    }
+  }
+
+  .invalid-field {
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-family: $font-light;
+  }
+
+  .form-group {
+    margin-top: 25px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    .btn {
+      width: 100px;
+      font-family: $font-light;
+      font-size: 14px;
+
+      @media #{$grid-sm} {
+        width: 150px;
+      }
+
+      @media #{$grid-md} {
+        width: 200px;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: '';
+          width: 1px;
+          height: 30px;
+          top: 10px;
+        }
+
+        &::after {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          content: '';
+          position: absolute;
+          top: 21px;
+        }
+      }
+
+      &.btn-hidden {
+        visibility: hidden;
+      }
+    }
+
+    .btn-next {
+      &.finish {
+        padding: 8px 15px;
+
+        @media #{$grid-md} {
+          padding: 15px;
+        }
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      @media #{$grid-md} {
+        padding: 15px 60px 15px 0;
+
+        &::before {
+          background-color: white;
+          right: 30%;
+        }
+
+        &::after {
+          border-width: 5px 0 5px 10px;
+          border-color: transparent transparent transparent white;
+          right: 25px;
+        }
+      }
+    }
+
+    .btn-skip {
+      margin-right: 15px;
+      background-color: transparent;
+      color: $main-color;
+      border: 1px solid $main-color;
+
+      &::before {
+        background-color: $main-color;
+      }
+
+      &::after {
+        border-width: 5px 0 5px 10px;
+        border-color: transparent transparent transparent $main-color;
+      }
+    }
+
+    .btn-prev {
+      background-color: transparent;
+      color: $main-color;
+      border: 1px solid $main-color;
+
+      @media #{$grid-md} {
+        padding: 15px 0 15px 60px;
+
+        &::before {
+          background-color: $main-color;
+          left: 30%;
+        }
+
+        &::after {
+          border-width: 5px 10px 5px 0;
+          border-color: transparent $main-color transparent transparent;
+          left: 25px;
+        }
+      }
+    }
+  }
+
+  .textbox-add-new {
+    margin-top: 40px;
+    font-size: $form-mobile-font-size-header;
+    font-family: $font-light;
+    text-decoration: underline;
+    cursor: pointer;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size-header;
+    }
+  }
+
+  .bool-header {
+    display: flex;
+    font-size: $form-mobile-font-size-header;
+    font-family: $font-light;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size-header;
+    }
+
+    .bool-spacer {
+      min-width: 250px;
+      flex: 1 1;
+      width: 20%;
+
+      @media #{$grid-md} {
+        min-width: 320px;
+      }
+    }
+
+    .bool-label {
+      padding-left: 1.25rem;
+
+      @media #{$grid-md} {
+        flex: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,77 @@
+build site dev:
+  image: node:16
+  stage: build
+  except:
+    - master
+  tags:
+    - docker
+    - shared
+  script:
+    - (cd react-js && npm install --progress=false)
+    - (cd react-js && npm run build:web)
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - react-js/build
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+    - react-js/node_modules/
+
+build site:
+  image: node:16
+  stage: build
+  only:
+    - master
+  tags:
+    - docker
+    - shared
+  script:
+    - (cd react-js && npm install --progress=false)
+    - (cd react-js && npm run build:web:prod)
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - react-js/build
+  cache:
+    key: $CI_COMMIT_REF_SLUG-$CI_PROJECT_DIR
+    paths:
+    - react-js/node_modules/
+  
+deploy:
+  image: alpine
+  stage: deploy
+  tags:
+    - docker
+    - shared
+  environment:
+    name: master
+    url: https://frankporterportal.com
+  only:
+    - master
+  script:
+    - apk add --no-cache rsync openssh
+    - mkdir -p ~/.ssh
+    - echo "$FPWP_SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
+    - chmod 600 ~/.ssh/id_dsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - rsync -rav --delete react-js/build/ fpowner@frankporterportal.com:/home/fpowner/public_html/
+
+deploy_dev:
+  image: alpine
+  stage: deploy
+  tags:
+    - docker
+    - shared
+  environment:
+    name: develop
+    url: https://fpowner.dev.frankportertech.com
+  only:
+    - develop
+  script:
+    - apk add --no-cache rsync openssh
+    - mkdir -p ~/.ssh
+    - echo "$FPWP_SSH_PRIVATE_KEY" >> ~/.ssh/id_dsa
+    - chmod 600 ~/.ssh/id_dsa
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - rsync -rav --delete react-js/build/ fpowner-dev@fpowner.dev.frankportertech.com:/home/fpowner-dev/public_html/

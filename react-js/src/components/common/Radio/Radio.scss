@@ -1,0 +1,75 @@
+@import '../../../styles/variables.scss';
+
+.radio.form-group {
+  font-family: $font-light;
+
+  .form-check {
+    margin: 5px 0;
+    display: flex;
+  }
+
+  label {
+    font-family: $font-light;
+    font-size: $form-mobile-font-size-header;
+
+    @media #{$grid-md} {
+      font-size: $form-desktop-font-size-header;
+    }
+  }
+
+  input[type='radio'] {
+    position: relative;
+    margin-top: 5px;
+
+    @media #{$grid-md} {
+      margin-top: 2px;
+    }
+
+    & + label {
+      padding-left: 20px;
+      font-size: $form-mobile-font-size;
+
+      @media #{$grid-md} {
+        font-size: $form-desktop-font-size;
+      }
+    }
+
+    &:disabled + label {
+      color: $gray-color;
+      cursor: not-allowed;
+
+      &::before {
+        border-color: $gray-color;
+      }
+    }
+    &:disabled::before {
+      border-color: $gray-color;
+    }
+
+    &::before {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      left: 50%;
+      border: 1px solid black;
+      background-color: white;
+      border-radius: 50%;
+      content: '';
+      transform: translate(-50%, -50%);
+    }
+
+    &:checked::after {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      background-color: $main-color;
+      content: '';
+      display: inline-block;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

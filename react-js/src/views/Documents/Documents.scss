@@ -1,0 +1,196 @@
+@import "../../styles/variables.scss";
+
+.statements-container {
+  .documents-selector {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto 20px;
+    display: flex;
+    width: 100%;
+    border: 1px solid $main-color;
+    color: $primary-text-color;
+
+    @media (min-width: $mobile-screen-min) {
+      display: none;
+    }
+
+    li {
+      padding: 8px 10px;
+      text-align: center;
+      font-size: 13px;
+      background-color: $secondary-color;
+      flex: 1;
+
+      div {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.active {
+        color: white;
+        background-color: $main-color;
+      }
+    }
+  }
+  .statement-item {
+    margin: 10px 0px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    border: 1px solid $main-color;
+    position: relative;
+
+    &.unread {
+      font-weight: bold;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .icon-statements {
+      display: none;
+    }
+
+    .statement-pdf-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: none;
+    }
+
+    @media (min-width: $mobile-screen-min) {
+      .statement-pdf-overlay {
+        display: block;
+      }
+      .statement-pdf-preview {
+        flex: 0 0 47px;
+
+        .icon-statements {
+          display: inline-block;
+          margin: 0 auto;
+        }
+
+        .icon-arrow {
+          display: none;
+        }
+      }
+    }
+
+    .statement-header {
+      padding: 10px 15px;
+      flex: 1;
+      font-size: 18px;
+    }
+
+    .statement-income {
+      padding: 10px 15px;
+      // width: calc(100% - 180px - 17px);
+      text-align: right;
+      color: $primary-text-color;
+      font-size: 13px;
+      letter-spacing: 0.65px;
+      line-height: 24px;
+    }
+
+    @media (max-width: 320px) {
+      .statement-header {
+        flex: 0 0 160px;
+        padding: 10px 10px;
+      }
+
+      .statement-income {
+        width: calc(100% - 160px - 17px);
+        padding: 10px 10px 10px 0;
+      }
+    }
+  }
+
+  .round-separator {
+    .circle,
+    ::before,
+    ::after {
+      background-color: $primary-text-color;
+    }
+  }
+
+  .selected-statement-container {
+    padding: 15px;
+
+    @media (min-width: $mobile-screen-min) {
+      padding: 0 40px 40px;
+    }
+
+    .statement-header {
+      font-size: 18px;
+      letter-spacing: 0.9px;
+
+      &.total-header {
+        font-weight: bold;
+        color: black;
+      }
+
+      &.header-grayed {
+        color: $primary-text-color;
+      }
+    }
+
+    .rows {
+      margin-bottom: 20px;
+    }
+    .reservation-row {
+      color: $primary-text-color;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      margin: 5px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .price {
+        padding-left: 10px;
+        white-space: nowrap;
+      }
+    }
+
+    .flex-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .summary {
+      background-color: black !important;
+      color: white !important;
+      font-size: 18px;
+      margin: 0 -15px;
+      margin-top: 20px;
+      padding: 20px 15px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    background-color: $main-color;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 8px 0px;
+    margin-top: 40px;
+  }
+}

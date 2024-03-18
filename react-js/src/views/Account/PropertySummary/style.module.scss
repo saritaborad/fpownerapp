@@ -1,0 +1,125 @@
+@import '../../../styles/variables.scss';
+
+.header {
+  display: flex;
+  border-bottom: 1px solid $main-color;
+  padding: 0 0 10px 0;
+  align-items: flex-start;
+
+  @media #{$grid-md} {
+    padding: 0 0 30px 0;
+  }
+}
+
+.nickname {
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-size: 29px;
+
+  @media #{$grid-md} {
+    font-size: 34px;
+  }
+}
+
+.info {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: 'FuturaBT-Light';
+  margin: 20px 0;
+
+  @media #{$grid-md} {
+    font-size: 23px;
+    line-height: 36px;
+    margin: 35px 0;
+  }
+
+  a {
+    color: $main-color;
+    font-family: 'FuturaLTPro-Book';
+  }
+}
+
+.section {
+  margin-top: 25px;
+
+  @media #{$grid-md} {
+    margin-top: 45px;
+  }
+}
+
+.sectionHeader {
+  color: $main-color;
+  font-family: 'FuturaBT-Light';
+  text-transform: uppercase;
+  margin-bottom: 0;
+  font-size: 20px;
+
+  @media #{$grid-md} {
+    font-size: 28px;
+  }
+}
+
+.row {
+  display: flex;
+  max-width: 1000px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+
+  @media #{$grid-md} {
+    flex-wrap: nowrap;
+    margin-top: 20px;
+  }
+}
+
+.col {
+  width: 50%;
+
+  &:nth-of-type(1n + 3) {
+    margin-top: 15px;
+
+    @media #{$grid-md} {
+      margin-top: 20px;
+    }
+  }
+
+  @media #{$grid-md} {
+    width: 25%;
+    margin-top: 0;
+
+    &.col40 {
+      width: 40%;
+    }
+  }
+
+  &.mobileSingle:nth-of-type(1n+2) {
+    @media (max-width: #{map-get($breakpoints, 'md')}) {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  &.fill {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-family: 'FuturaBT-Light';
+    margin-bottom: 0;
+  }
+
+  span {
+    font-family: 'FuturaLTPro-Book';
+    font-size: 18px;
+
+    @media #{$grid-md} {
+      font-size: 23px;
+    }
+  }
+}
+
+.bankButton {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

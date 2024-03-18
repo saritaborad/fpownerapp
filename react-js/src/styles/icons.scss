@@ -1,0 +1,32 @@
+@import "variables.scss";
+
+.icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  &.icon-edit {
+    background-image: url("./../assets/ico-edit.svg");
+  }
+
+  &.icon-remove {
+    background-image: url("./../assets/ico-remove.svg");
+  }
+
+  &.icon-plus {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-image: url("./../assets/ic_add_circle_outline_24px.svg");
+  }
+
+  &.icon-minus {
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+    background-image: url("./../assets/ic_remove_circle_outline_24px.svg");
+  }
+}

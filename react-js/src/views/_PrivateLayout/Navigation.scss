@@ -1,0 +1,81 @@
+@import "styles/variables.scss";
+
+.navigation-container {
+  position: fixed;
+  bottom: 0;
+  bottom: calc(constant(safe-area-inset-bottom) / 2);
+  bottom: calc(env(safe-area-inset-bottom) / 2);
+  left: 0;
+  right: 0;
+  height: 65px;
+  display: flex;
+  background-color: $main-color;
+  z-index: 1;
+
+  &:after {
+    content: "";
+    position: fixed;
+    top: calc(100vh - (constant(safe-area-inset-bottom) / 2));
+    top: calc(100vh - (env(safe-area-inset-bottom) / 2));
+    height: calc(constant(safe-area-inset-bottom) / 2);
+    height: calc(env(safe-area-inset-bottom) / 2);
+    left: 0;
+    right: 0;
+    background-color: $main-color;
+  }
+
+  @media (min-width: $mobile-screen-min) {
+    display: none;
+  }
+
+  .navigation-col {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+
+  .navigation-button {
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+
+    &.disabled {
+      .navigation-button-text {
+        color: $gray-color;
+      }
+      .icon {
+        background-color: $gray-color;
+      }
+    }
+
+    .icon {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .navigation-button-text {
+      font-size: 13px;
+      letter-spacing: 0.6px;
+      color: white;
+    }
+
+    .icon-container {
+      background-color: $main-color;
+      margin: 0 auto;
+
+      &.icon-selected {
+        width: 51px;
+        height: 51px;
+        border-radius: 50%;
+        border: 3px solid $main-color;
+        position: relative;
+        top: -5px;
+      }
+    }
+  }
+
+  button {
+    width: 33%;
+  }
+}

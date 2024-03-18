@@ -1,0 +1,45 @@
+@import "../../../../styles/variables.scss";
+
+.thank-you-page {
+  @media (max-width: map-get($breakpoints, "lg")-1) {
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+  }
+
+  p {
+    font-size: 14px;
+    font-family: $font-bold;
+    text-align: center;
+    padding: 0 10px;
+
+    @media #{$grid-lg} {
+      margin-top: 40px;
+      font-size: 23px;
+      font-family: $font-light;
+      text-align: left;
+      padding: 0;
+    }
+  }
+
+  .edit-profile-header {
+    @media (max-width: map-get($breakpoints, "lg")-1) {
+      border: none;
+      font-size: 24px;
+      text-align: center;
+      color: black;
+      font-family: $font-bold;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+    }
+  }
+
+  .round-separator {
+    width: 120px;
+    margin: 0 auto 15px;
+
+    @media #{$grid-lg} {
+      display: none;
+    }
+  }
+}
